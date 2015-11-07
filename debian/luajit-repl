@@ -1,0 +1,35 @@
+#!/bin/sh
+
+LUA_INTERPRETER=`echo $0 | awk -F - '{print $1}' | awk -F / '{print $NF}'`
+
+case $LUA_INTERPRETER in
+    lua)
+        LUA_VERSION=`env lua -v | cut -f 2 -d ' ' | awk -F . '{printf("%d.%d", $1, $2)}'`
+        LUA_BIN=`which lua$LUA_VERSION`
+        REPL="/usr/share/lua/$LUA_VERSION/rep.lua"
+        ;;
+    lua5.1)
+        LUA_BIN=`which lua5.1`
+        REPL=/usr/share/lua/5.1/rep.lua
+        ;;
+    lua5.2)
+        LUA_BIN=`which lua5.2`
+        REPL=/usr/share/lua/5.2/rep.lua
+        ;;
+    lua5.3)
+        LUA_BIN=`which lua5.3`
+        REPL=/usr/share/lua/5.3/rep.lua
+        ;;
+    luajit)
+        LUA_BIN=`which luajit`
+        REPL=/usr/share/lua/5.1/rep.lua
+        ;;
+    *)
+        echo "Unknown interpreter: $LUA_INTERPRETER."
+        exit 1
+        ;;
+esac
+
+if test -r $REPL; then
+    $LUA_BIN $REPL
+fi

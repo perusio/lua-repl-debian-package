@@ -1,0 +1,3 @@
+usr/bin/luajit-repl usr/bin/lua-repl
+usr/bin/luajit-repl usr/bin/lua5.1-repl
+usr/bin/luajit-repl usr/bin/lua5.2-repl

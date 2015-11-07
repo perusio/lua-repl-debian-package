@@ -1,0 +1,5 @@
+lua-repl (0.8-perusio.1.0) unstable; urgency=medium
+
+  * First steps in packaging.
+
+ -- António P. P. Almeida <appa@perusio.net>  Sat, 07 Nov 2015 06:14:39 +0100

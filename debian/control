@@ -1,0 +1,19 @@
+Source: lua-repl
+Section: interpreters
+Priority: optional
+Maintainer: António P. P. Almeida <appa@perusio.net>
+Build-Depends: debhelper (>= 9), dh-lua, luadoc
+Standards-Version: 3.9.3
+Homepage: https://github.com/hoelzro/lua-repl
+Vcs-Git: git@github.com:hoelzro/lua-repl.git
+Vcs-Browser: https://github.com/hoelzro/lua-repl
+
+Package: lua-repl
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}, lua-linenoise
+Provides: ${lua:Provides}
+Description: Reusable Lua REPL that can be embedded in Lua programs
+ and replaces with advantages the stock Lua REPL.
+ .
+ It supports plugins for things like tab completion and automatic
+ insertion of return in front of expressions.

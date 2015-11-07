@@ -1,0 +1,9 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@ --buildsystem=lua --with lua
+
+override_dh_auto_install:
+	dh_auto_install
+	mkdir -p debian/usr
+	cp debian/luajit-repl debian/lua-repl/usr/bin/

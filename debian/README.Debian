@@ -1,0 +1,32 @@
+This package installs the repl.lua script in the Lua directory. It
+installs a shell wrapper around this Lua script so that you can use
+the REPL with a multitude of Lua interpreters.
+
+/usr/share/lua/5.1/repl.lua
+
+and
+
+/usr/share/lua/5.2/repl.lua
+
+If you have both Lua 5.1 and Lua 5.1 installed. It can be used with
+any of the lua5.1, lua5.2 or luajit REPLs. To invoke the REPL with the
+environment configured Lua version do:
+
+lua-repl
+
+for luajit do:
+
+luajit-repl
+
+for lua5.2 do:
+
+lua5.2-repl
+
+for lua5.1 do:
+
+lua5.1-repl
+
+You can develop your own plugins. See the example.lua file in the docs
+directory for examples.
+
+ -- António P. P. Almeida <appa@perusio.net>, Sat,  7 Nov 2015 05:17:04 +0100
